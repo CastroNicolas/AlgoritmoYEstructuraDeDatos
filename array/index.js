@@ -20,3 +20,13 @@ const showArray2 = () => {
 };
 console.log("______________________");
 showArray2();
+
+const array2 = [1, 2, 3, 4, 5, 6];
+
+const showArray3 = () => {
+  for (let item of array2) {
+    console.log(item);
+  }
+};
+console.log("______________________");
+showArray3();
