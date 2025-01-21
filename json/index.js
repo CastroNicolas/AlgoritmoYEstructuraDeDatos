@@ -9,7 +9,8 @@ const promise = new Promise((resolve, reject) => {
   }, 3000);
 });
 
-promise.then((res) => console.log(res)).catch((err) => console.log(err));
+// promise.then((res) => console.log(res)).catch((err) => console.log(err));
+
 // console.log(promise); // undefined
 // console.log(promise.then()); // undefined
 // console.log(promise.catch()); // undefined
@@ -34,4 +35,15 @@ const getTodos = async () => {
   }
 };
 
-getTodos();
+// getTodos();
+
+// Leer nuestro json con el api fetch
+fetch("people.json")
+  .then((data) => data.json())
+  .then((json) => {
+    const people = json;
+    console.log(people);
+    for (let hobby of people.hobbies) {
+      console.log("hobby: " + hobby);
+    }
+  });
